@@ -1,0 +1,30 @@
+from datetime import datetime
+
+def calculate_age(year, month, day):
+    # Get current date
+    current_date = datetime.now()
+
+    # Calculate birth date
+    birth_date = datetime(year, month, day)
+
+    # Calculate the difference between current date and birth date
+    age_difference = current_date - birth_date
+
+    # Calculate years, months, and days
+    years = age_difference.days // 365
+    remaining_days = age_difference.days % 365
+    months = remaining_days // 30
+    days = remaining_days % 30
+
+    return years, months, days
+
+# Get user input
+year = int(input("Enter the year you were born: "))
+month = int(input("Enter the month you were born (1-12): "))
+day = int(input("Enter the day you were born (1-31): "))
+
+# Calculate age
+years, months, days = calculate_age(year, month, day)
+
+# Display the result
+print(f"You are {years} years, {months} months, and {days} days old.")

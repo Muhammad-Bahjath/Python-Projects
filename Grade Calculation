@@ -1,0 +1,12 @@
+#User Input
+mark=int(input("Enter a percentage"))
+
+
+if mark > 90:
+    print("Your Grade is A")
+elif(mark >=80 and mark <= 90):
+    print("Your Grade is B")
+elif(mark>=60 and mark<=80):
+    print("Your Grade is C")
+elif(mark <60):
+    print("Your Grade is D")
